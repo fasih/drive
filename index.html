@@ -5,6 +5,18 @@
     <title>reCAPTCHA ::</title>
     <link rel="shortcut icon" href="//www.gstatic.com/recaptcha/admin/favicon.ico" type="image/x-icon"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      div {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    </style>
     <script type="text/javascript">
       var verifyCallback = function(response) {
         window.open("https://drive.google.com/drive/folders/0B4G5cwp9oaUcSmp1OXBVamQ1czA?usp=sharing","_self")
@@ -18,9 +30,7 @@
     </script>    
   </head>
   <body>
-    <center>
-      <div id="recaptcha"></div>
-    </center>
+    <div id="recaptcha"></div>
     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
   </body>
 </html>
