@@ -4,11 +4,21 @@
   <head>
     <title>reCAPTCHA : Public Google Drive</title>
      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+     <script type="text/javascript">
+      var verifyCallback = function(response) {
+        alert(response);
+      };
+      var onloadCallback = function() {
+        grecaptcha.render('recaptcha', {
+          'sitekey' : '6LdGpCcUAAAAAGd6iJ-1X-p7YtOajXfxKA3WxXAX',
+          'callback' : verifyCallback,
+          'theme' : 'dark'
+        });
+      };
+    </script>    
   </head>
   <body>
-    <center>
-      <div class="g-recaptcha" data-sitekey="6LdGpCcUAAAAAGd6iJ-1X-p7YtOajXfxKA3WxXAX"></div>
-    </center>
+    <center id="recaptcha"></center>
   </body>
 </html>
 
