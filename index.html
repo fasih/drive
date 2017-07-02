@@ -6,13 +6,12 @@
      
      <script type="text/javascript">
       var verifyCallback = function(response) {
-        alert(response);
+        window.open("https://drive.google.com/drive/folders/0B4G5cwp9oaUcSmp1OXBVamQ1czA?usp=sharing")
       };
       var onloadCallback = function() {
         grecaptcha.render('recaptcha', {
           'sitekey' : '6LdGpCcUAAAAAGd6iJ-1X-p7YtOajXfxKA3WxXAX',
           'callback' : verifyCallback,
-          'theme' : 'dark'
         });
       };
     </script>    
@@ -21,6 +20,6 @@
     <center>
       <div id="recaptcha"></div>
     </center>
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
   </body>
 </html>
